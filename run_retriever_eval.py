@@ -1,3 +1,3 @@
-from src.retriever.eval import simple_evaluation
+from src.retriever.eval import test_deployment_metrics
 
-simple_evaluation()
+test_deployment_metrics()
