@@ -10,11 +10,11 @@ on:
       - edited
       - synchronize
     branches:
-      - master
+      - main
 
 jobs:
-  check_format:
-    name: Check formating
+  run_tests:
+    name: Run eval retriever
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,6 +30,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-        run: uv sync --only-group lint
-      - name: Check format
-        run: uv run --no-sync fix_file.py --check
+        run: uv sync
+      - name: Run tests
+        run: uv run --no-sync run_retriever_eval.py
