@@ -1,0 +1,15 @@
+[project]
+name = "rag"
+description = ""
+readme = "README.md"
+requires-python = "~=3.12"
+version = "0.0.0"
+dependencies = [
+    "polars==1.31.0",
+    "bm25s==0.2.13",
+    "sentence-transformers==5.0.0"
+]
+
+[dependency-groups]
+dev = [{ include-group = "lint" }]
+lint = ["ruff==0.11.12", "rich==14.0.0"]
