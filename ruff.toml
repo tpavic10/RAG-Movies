@@ -1,0 +1,14 @@
+line-length = 110
+target-version = "py312"
+indent-width = 4
+
+[format]
+indent-style = "space"
+docstring-code-format = true
+docstring-code-line-length = 100
+line-ending = "auto"
+quote-style = "double"
+
+[lint]
+select = ["I", "ANN", "ARG", "RET", "Q", "T20", "PIE", "COM", "C4", "F"]
+ignore = ["COM812", "T201"]
