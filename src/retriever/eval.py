@@ -1,7 +1,7 @@
 from src.data.data_preparation import get_data
 from src.retriever.retriever import Retriever
 
-THRESHOLD_MEAN_AVERAGE_PRECISION_AT_5 = 0.5
+THRESHOLD_MEAN_AVERAGE_PRECISION_AT_5 = 0.8
 THRESHOLD_RECIPROCAL_RANK = 0.6
 
 def test_deployment_metrics() -> None:
