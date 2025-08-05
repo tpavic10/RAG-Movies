@@ -31,6 +31,13 @@ uv run app/main.py
 
 2. Dockerized web app:
 
+To run the app in a Docker container, make sure you have Docker and Docker Compose installed on your system.
+
+If Docker is not installed, you can follow the official installation guide:
+👉 https://docs.docker.com/get-docker/
+
+Once Docker is ready, start the application with:
+
 ```bash
 source deploy.sh
 ```
