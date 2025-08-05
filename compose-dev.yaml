@@ -1,0 +1,18 @@
+services:
+  rag-api:
+    container_name: movie-rag
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rag
+    ports:
+      - "8087:8087"
+    env_file:
+      - .env
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

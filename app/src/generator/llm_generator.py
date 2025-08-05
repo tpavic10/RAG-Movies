@@ -21,5 +21,5 @@ class Generator:
             {"role": "system", "content": system_prompt()},
             {"role": "user", "content": user_prompt(query=query, retrieved_context=retrieved_context)},
         ]
-        output = pipeline(messages, do_sample=False, max_new_tokens=128)
-        return output[0]["generated_text"][-1]
+        output = self.pipeline(messages, max_new_tokens=128)
+        return output[0]["generated_text"][-1]['content']
