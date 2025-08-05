@@ -32,4 +32,4 @@ jobs:
       - name: Install dependencies
         run: uv sync
       - name: Run tests
-        run: uv run --no-sync run_retriever_eval.py
+        run: uv run --no-sync app/run_retriever_eval.py
