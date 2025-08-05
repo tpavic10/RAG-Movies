@@ -11,6 +11,6 @@ def run_pipeline(query: str) -> str:
     relevant_documents = retriever.retrieve(query=query, top_k=5)
     document_context = format_documents_to_string(documents=documents, relevant_documents=relevant_documents)
     
-    #generator = Generator()
-    #response = generator.generate(query, document_context)
-    return document_context
+    generator = Generator()
+    response = generator.generate(query, document_context)
+    return response

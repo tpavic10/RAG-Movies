@@ -9,3 +9,10 @@ services:
       - "8087:8087"
     env_file:
       - .env
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
